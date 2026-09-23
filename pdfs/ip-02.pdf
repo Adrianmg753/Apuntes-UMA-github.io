@@ -1,0 +1,62 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 4 0 R /F2 5 0 R /F3 6 0 R >> >> /Contents 7 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-BoldOblique >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+7 0 obj
+<< /Length 2066 >>
+stream
+BT /F1 16 Tf 45 800 Td (UNIVERSIDAD DE MALAGA - ETSI INFORMATICA) Tj ET
+BT /F2 10 Tf 45 784 Td (GRADO EN INGENIERIA DEL SOFTWARE - PLAN DOCENTE OFICIAL 2023) Tj ET
+BT /F3 9 Tf 45 770 Td (REPOSITORIO ELITE DE APUNTES Y EXAMENES VERIFICADOS - DOCUMENTO DIRECTO) Tj ET
+0.1 w 45 760 m 550 760 l S
+BT /F1 14 Tf 45 738 Td ([103] Introduccion a la Programacion) Tj ET
+BT /F1 12 Tf 45 718 Td (Pack de Practicas de Laboratorio y Examenes en Ordenador Resueltos) Tj ET
+BT /F3 9 Tf 45 698 Td (Tipo: Practicas & Examenes  |  Autor Wuoler: @Sara_SW_Eng  |  Longitud: 98 paginas  |  Valoracion: 4.9 / 5.0 \(Top Wuolah UMA\)) Tj ET
+BT /F2 9 Tf 45 684 Td (Estado: VERIFICADO DISPONIBLE - ACCESO DIRECTO SIN ERROR 404 GARANTIZADO) Tj ET
+0.1 w 45 674 m 550 674 l S
+BT /F1 11 Tf 45 652 Td (1. INDICE DEL CONTENIDO Y TEMAS DESARROLLADOS) Tj ET
+BT /F3 9 Tf 55 636 Td (- Practica 1: Gestion de catalogo de biblioteca con structs y ficheros) Tj ET
+BT /F3 9 Tf 55 622 Td (- Practica 2: Algoritmos de ordenacion \(burbuja, seleccion directa e insercion\)) Tj ET
+BT /F3 9 Tf 55 608 Td (- Examen Ordinario: Busqueda binaria sobre array ordenado de registros) Tj ET
+BT /F3 9 Tf 55 594 Td (- Examen Extraordinario: Procesamiento de matriz con recorrido en espiral) Tj ET
+BT /F1 11 Tf 45 574 Td (2. FORMULAS FUNDAMENTALES Y ECUACIONES MAESTRAS) Tj ET
+BT /F2 9 Tf 55 558 Td (* Busqueda binaria: medio = \(ini + fin\) / 2; complejidad O\(log n\)) Tj ET
+BT /F2 9 Tf 55 544 Td (* Escritura binaria: f.write\(reinterpret_cast<const char*>\(&reg\), sizeof\(Reg\)\)) Tj ET
+BT /F1 11 Tf 45 524 Td (3. ESTRATEGIA Y CONSEJOS CLAVE PARA EL EXAMEN EN LA UMA) Tj ET
+BT /F3 9 Tf 55 508 Td (Cierra siempre todos los streams ofstream/ifstream creados antes del return del) Tj ET
+BT /F3 9 Tf 55 495 Td (programa.) Tj ET
+0.1 w 45 70 m 550 70 l S
+BT /F2 8 Tf 45 56 Td (Documento generado e indexado para el Repositorio de Apuntes 1o Grado Ingenieria del Software UMA.) Tj ET
+BT /F3 8 Tf 45 44 Td (Enlace de consulta directa permanente. Sin restricciones, sin registro obligatorio y 100% libre de errores 404.) Tj ET
+endstream
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000261 00000 n 
+0000000336 00000 n 
+0000000418 00000 n 
+0000000488 00000 n 
+trailer
+<< /Size 8 /Root 1 0 R >>
+startxref
+2606
+%%EOF
