@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO & Meta Tags -->
+  <title>Explorador de Asignaturas y Apuntes | ETSI Informática UMA</title>
+  <meta name="description" content="Plataforma de asignaturas y apuntes verificados en Wuolah de todos los cursos de los grados de la Escuela Técnica Superior de Ingeniería Informática de la Universidad de Málaga (UMA).">
+  <meta name="keywords" content="UMA, ETSI Informatica, Wuolah, apuntes, examenes resueltos, Malaga, Software, Informatica, Computadores, Ciberseguridad, Salud">
+  <meta name="author" content="Adrián Morales • ETSI Informática UMA">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Explorador de Grado | ETSI Informática UMA">
+  <meta property="og:description" content="Catálogo completo de asignaturas desde 1º a 4º curso con apuntes top de Wuolah y escaneo en tiempo real.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Ambient Glow Background -->
+  <div class="ambient-glow ambient-glow-1"></div>
+  <div class="ambient-glow ambient-glow-2"></div>
+
+  <!-- Header / Navbar -->
+  <header class="site-header">
+    <div class="container header-content">
+      <a href="index.html" class="brand" title="Volver al MegaHub de Carreras ETSI">
+        <div class="brand-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="16 18 22 12 16 6"></polyline>
+            <polyline points="8 6 2 12 8 18"></polyline>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <h1>ETSI Informática <span class="plan-badge">MegaHub UMA</span></h1>
+          <p>Universidad de Málaga • Coordinado por Adrián Morales</p>
+        </div>
+      </a>
+
+      <div class="header-actions">
+        <a href="index.html" class="header-btn header-btn-secondary" title="Volver al Selector de Carreras">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+          <span>MegaHub de Carreras</span>
+        </a>
+        <a href="metabuscador.html" class="header-btn header-btn-metabuscador" title="Ir al Metabuscador de Apuntes y PDFs en Tiempo Real">
+          <span class="live-pulse-dot" style="width: 7px; height: 7px;"></span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <span>Metabuscador en Vivo</span>
+        </a>
+        <a href="https://wuolah.com/uma-escuela-tecnica-superior-ingenieria-informatic" target="_blank" rel="noopener noreferrer" class="header-btn header-btn-wuolah" title="Comunidad oficial Wuolah (ETSI Informática UMA)">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+          </svg>
+          <span>Comunidad Wuolah UMA</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <!-- Hero Section of Current Degree -->
+    <section class="hero" style="padding-bottom: 16px;">
+      <div class="hero-pill">
+        <span class="hero-pill-dot"></span>
+        <span id="degreePlanBadge">Plan Oficial ETSI UMA</span> • <span id="degreeAcronymBadge">4 Cursos • 240 ECTS</span>
+      </div>
+
+      <h2 class="hero-title" id="degreeHeroTitle">
+        Cargando Carrera...
+      </h2>
+
+      <p class="hero-subtitle" id="degreeHeroSubtitle">
+        Acceso estructurado a todas las materias por curso con los apuntes mejor valorados de Wuolah, exámenes resueltos y escaneo en tiempo real.
+      </p>
+
+      <!-- Prominent Credits Banner -->
+      <div class="credits-banner">
+        <div class="credits-author-wrap">
+          <div class="credits-avatar-icon">AM</div>
+          <div>
+            <h4 class="credits-title">Proyecto creado y coordinado por <strong>Adrián Morales</strong></h4>
+            <p class="credits-subtitle">En colaboración con la comunidad estudiantil de la Escuela Técnica Superior de Ingeniería Informática (ETSI) - Universidad de Málaga (UMA).</p>
+          </div>
+        </div>
+        <div class="credits-badge-pill">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+          <span>Créditos Oficiales • UMA</span>
+        </div>
+      </div>
+
+      <!-- Stats Grid -->
+      <div class="hero-stats" id="degreeStatsRow">
+        <!-- Injected dynamically via carrera.js -->
+      </div>
+    </section>
+
+    <!-- Controls Section: Course Tabs & Filters -->
+    <section class="controls-section">
+      <!-- Dynamic Course Navigation Tabs -->
+      <div class="course-tabs-wrap" id="courseTabsWrap">
+        <!-- Injected dynamically via carrera.js -->
+      </div>
+
+      <!-- Search Input -->
+      <div class="search-wrap">
+        <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input 
+          type="text" 
+          id="searchInput" 
+          class="search-input" 
+          placeholder="Buscar asignatura por nombre (ej. Algoritmos, Redes, SSOO), código o tema..." 
+          autocomplete="off"
+        >
+        <button id="searchClearBtn" class="search-clear-btn" title="Borrar búsqueda">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="filters-row">
+        <!-- Semester Filter -->
+        <div class="filter-group">
+          <span class="filter-label">Semestre:</span>
+          <button class="filter-btn active" data-filter-type="semester" data-value="all">Todos</button>
+          <button class="filter-btn" data-filter-type="semester" data-value="1">1º Semestre</button>
+          <button class="filter-btn" data-filter-type="semester" data-value="2">2º Semestre</button>
+        </div>
+
+        <!-- Category Filter -->
+        <div class="filter-group">
+          <span class="filter-label">Área:</span>
+          <button class="filter-btn active" data-filter-type="category" data-value="all">Todas</button>
+          <button class="filter-btn" data-filter-type="category" data-value="programming">Programación & Software</button>
+          <button class="filter-btn" data-filter-type="category" data-value="math">Matemáticas</button>
+          <button class="filter-btn" data-filter-type="category" data-value="systems">Sistemas & Redes</button>
+          <button class="filter-btn" data-filter-type="category" data-value="hardware">Hardware</button>
+          <button class="filter-btn" data-filter-type="category" data-value="security">Ciberseguridad & IA</button>
+          <button class="filter-btn" data-filter-type="category" data-value="health">Salud & Bio</button>
+          <button class="filter-btn" data-filter-type="category" data-value="business">Empresa</button>
+        </div>
+
+        <div class="results-count" id="resultsCount">
+          Cargando asignaturas...
+        </div>
+      </div>
+    </section>
+
+    <!-- Subjects Grid -->
+    <section class="subjects-grid" id="subjectsGrid">
+      <!-- Injected dynamically via carrera.js -->
+    </section>
+
+    <!-- Banner de Acceso al Metabuscador en Vivo -->
+    <section style="margin: 40px 0 24px 0; background: linear-gradient(135deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.85) 100%); border: 1px solid rgba(99, 102, 241, 0.35); border-radius: var(--radius-lg); padding: 24px 30px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);">
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <div class="engine-icon-wrap" style="width: 48px; height: 48px;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            <circle cx="11" cy="11" r="3"></circle>
+          </svg>
+        </div>
+        <div>
+          <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px;">
+            <span class="live-pulse-dot" style="width: 7px; height: 7px;"></span>
+            <span style="font-size: 0.74rem; font-weight: 800; color: #a5b4fc; text-transform: uppercase; letter-spacing: 0.05em;">Metabuscador Multi-Fuente Activo</span>
+          </div>
+          <h3 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; color: #fff; margin: 0 0 4px 0;">
+            ¿Buscas exámenes específicos de esta carrera o repositorios en GitHub?
+          </h3>
+          <p style="font-size: 0.86rem; color: var(--text-muted); margin: 0;">
+            Utiliza el metabuscador para rastrear Wuolah en tiempo real, Google Dorking (site:uma.es) y repositorios abiertos sin precarga estática.
+          </p>
+        </div>
+      </div>
+      <a href="metabuscador.html" class="header-btn header-btn-metabuscador" style="padding: 12px 22px; font-size: 0.92rem;" title="Abrir Metabuscador">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <span>Abrir Metabuscador en Vivo</span>
+      </a>
+    </section>
+  </main>
+
+  <!-- Subject Details Modal -->
+  <div class="modal-backdrop" id="subjectModal" role="dialog" aria-modal="true" aria-labelledby="modalHeaderContent">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div id="modalHeaderContent">
+          <!-- Injected dynamically -->
+        </div>
+        <button class="modal-close-btn" id="modalCloseBtn" title="Cerrar ventana">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <div class="modal-body" id="modalBodyContent">
+        <!-- Injected dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- PDF Reader / Ficha Modal -->
+  <div class="modal-backdrop" id="pdfViewerModal" role="dialog" aria-modal="true" aria-labelledby="pdfModalTitle">
+    <div class="modal-card pdf-viewer-modal-card">
+      <div class="modal-header pdf-viewer-header">
+        <div class="pdf-modal-title-group">
+          <div class="pdf-file-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          </div>
+          <div>
+            <h3 id="pdfModalTitle" class="pdf-modal-title">Ficha Técnica del Documento</h3>
+            <p id="pdfModalSubtitle" class="pdf-modal-subtitle"></p>
+          </div>
+        </div>
+
+        <div class="pdf-modal-actions">
+          <a id="btnPdfModalOpenTab" href="#" target="_blank" rel="noopener noreferrer" class="btn-pdf-action btn-pdf-primary" title="Abrir y descargar este PDF en Wuolah">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            <span>Abrir en Wuolah</span>
+          </a>
+          <a id="btnPdfModalDownload" href="#" target="_blank" rel="noopener noreferrer" class="btn-pdf-action btn-pdf-secondary" title="Descargar PDF en Wuolah">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            <span>Descargar en Wuolah</span>
+          </a>
+          <button id="btnPdfModalPrint" class="btn-pdf-action btn-pdf-secondary" title="Imprimir documento">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+            <span>Imprimir</span>
+          </button>
+          <button class="modal-close-btn" id="pdfModalCloseBtn" title="Cerrar visor">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="modal-body pdf-modal-body" id="pdfModalBody">
+        <!-- Injected dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Live Subject Scanner Modal -->
+  <div class="modal-backdrop" id="liveScannerModal" role="dialog" aria-modal="true" aria-labelledby="liveScannerModalTitle">
+    <div class="modal-card" style="max-width: 880px;">
+      <div class="modal-header">
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <div class="engine-icon-wrap" style="width: 40px; height: 40px;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+          </div>
+          <div>
+            <div class="engine-live-tag" style="margin-bottom: 4px;">
+              <span class="live-pulse-dot"></span>
+              <span>Escáner en Tiempo Real Activo</span>
+            </div>
+            <h3 id="liveScannerModalTitle" style="font-family: var(--font-heading); font-size: 1.3rem; font-weight: 800; color: #fff; margin: 0;"></h3>
+          </div>
+        </div>
+        <button class="modal-close-btn" id="liveScannerModalCloseBtn" title="Cerrar escáner">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+
+      <div class="modal-body" id="liveScannerModalBody" style="padding: 24px;">
+        <!-- Injected dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>
+        Plataforma desarrollada y coordinada por <strong>Adrián Morales</strong> para la comunidad estudiantil de la <strong>Escuela Técnica Superior de Ingeniería Informática</strong> - <strong>Universidad de Málaga (UMA)</strong>.
+      </p>
+      <div class="footer-links">
+        <a href="index.html">MegaHub de Carreras</a>
+        <a href="metabuscador.html">Metabuscador en Vivo</a>
+        <a href="https://www.uma.es/etsi-informatica/" target="_blank" rel="noopener">ETSI Informática UMA</a>
+        <a href="https://www.uma.es" target="_blank" rel="noopener">Universidad de Málaga</a>
+        <a href="https://wuolah.com" target="_blank" rel="noopener">Comunidad Wuolah</a>
+      </div>
+      <p style="font-size: 0.76rem; color: var(--text-dim); max-width: 700px; margin-top: 8px;">
+        Aviso: Recursos académicos recopilados con fines didácticos y de libre consulta para estudiantes de la UMA. Todos los enlaces dirigen a material abierto en Wuolah.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="degrees_data.js"></script>
+  <script src="carrera.js"></script>
+</body>
+</html>

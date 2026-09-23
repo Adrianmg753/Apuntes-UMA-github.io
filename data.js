@@ -4,7 +4,7 @@
  * 
  * Enlaces verificados a los mejores apuntes gratuitos de Wuolah (mayor valoración,
  * más completos y sin enlaces rotos ni plantillas genéricas).
- * Optimizados para abrir directamente con tu cuenta iniciada en Opera GX.
+ * Optimizados para abrir y descargar directamente en Wuolah.
  */
 
 const SUBJECTS_DATA = [
@@ -783,3 +783,8 @@ const WUOLAH_SURVIVAL_TIPS = [
     description: "No descuides las prácticas de laboratorio en asignaturas como Matemática Discreta o Introducción a la Programación. Aprobar el laboratorio suele ser condición indispensable para superar la asignatura en la convocatoria ordinaria."
   }
 ];
+
+if (typeof window !== 'undefined') {
+  window.SUBJECTS_DATA = SUBJECTS_DATA;
+  window.WUOLAH_SURVIVAL_TIPS = WUOLAH_SURVIVAL_TIPS;
+}

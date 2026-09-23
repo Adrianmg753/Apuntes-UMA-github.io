@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <span>${note.downloads} descargas</span>
               </div>
               <div class="note-action-btns">
-                <a href="${note.wuolahUrl}" target="_blank" rel="noopener noreferrer" class="btn-pdf-view" onclick="window.trackWuolahOpen('${note.title}')" title="Abrir y descargar este PDF en Wuolah con tu cuenta de Opera GX">
+                <a href="${note.wuolahUrl}" target="_blank" rel="noopener noreferrer" class="btn-pdf-view" onclick="window.trackWuolahOpen('${note.title}')" title="Abrir y descargar este PDF en Wuolah">
                   <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                     <polyline points="15 3 21 3 21 9"></polyline>
@@ -231,7 +231,10 @@ document.addEventListener('DOMContentLoaded', () => {
               </svg>
               <span>PDFs Mejor Valorados en Wuolah</span>
             </div>
-            <span class="wuolah-badge-count">3 TOP RECURSOS</span>
+            <button type="button" class="btn-scan-live" onclick="window.scanSubjectLive('${sub.id}')" title="Escanear en tiempo real los mejores apuntes y últimas subidas de ${sub.acronym}">
+              <span class="live-pulse-dot" style="width: 7px; height: 7px;"></span>
+              <span>⚡ Escanear en Vivo</span>
+            </button>
           </div>
 
           <div class="wuolah-notes-list">
@@ -247,7 +250,7 @@ document.addEventListener('DOMContentLoaded', () => {
               </svg>
               Ver Temario y Apuntes
             </button>
-            <a href="${sub.bestWuolahNotes[0].wuolahUrl}" target="_blank" rel="noopener noreferrer" class="btn-action-icon" onclick="window.trackWuolahOpen('${sub.bestWuolahNotes[0].title}')" title="Abrir apunte top de ${sub.acronym} en Wuolah (Opera GX)">
+            <a href="${sub.bestWuolahNotes[0].wuolahUrl}" target="_blank" rel="noopener noreferrer" class="btn-action-icon" onclick="window.trackWuolahOpen('${sub.bestWuolahNotes[0].title}')" title="Abrir apunte top de ${sub.acronym} en Wuolah">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                 <polyline points="15 3 21 3 21 9"></polyline>
@@ -296,7 +299,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   window.trackWuolahOpen = function(title) {
-    showToast(`🚀 Abriendo en Wuolah con tu cuenta de Opera GX: "${title}"`);
+    showToast(`🚀 Abriendo en Wuolah: "${title}"`);
   };
 
   function handleLaunchFinderSearch() {
@@ -312,7 +315,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (matchedNote && matchedNote.wuolahUrl) {
-      showToast(`🚀 Abriendo "${matchedNote.title}" en Wuolah (Opera GX)...`);
+      showToast(`🚀 Abriendo "${matchedNote.title}" en Wuolah...`);
       window.open(matchedNote.wuolahUrl, '_blank', 'noopener,noreferrer');
     } else {
       window.open(subject.wuolahDirectUrl, '_blank', 'noopener,noreferrer');
@@ -384,7 +387,7 @@ document.addEventListener('DOMContentLoaded', () => {
               </div>
             </div>
             <div class="note-action-btns">
-              <a href="${n.wuolahUrl}" target="_blank" rel="noopener noreferrer" class="btn-pdf-view" onclick="window.trackWuolahOpen('${n.title}')" title="Abrir y descargar este PDF en Wuolah con tu cuenta de Opera GX">
+              <a href="${n.wuolahUrl}" target="_blank" rel="noopener noreferrer" class="btn-pdf-view" onclick="window.trackWuolahOpen('${n.title}')" title="Abrir y descargar este PDF en Wuolah">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                   <polyline points="15 3 21 3 21 9"></polyline>
@@ -539,7 +542,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <div>
               <div class="pdf-status-title">Documento Oficial de Wuolah • Enlace 100% Verificado</div>
               <div class="pdf-status-desc">
-                Este enlace te redirige al documento original en Wuolah. Como tienes la cuenta iniciada en Opera GX, podrás leerlo y descargarlo directamente sin coste ni bloqueos.
+                Este enlace te redirige al documento original en Wuolah, donde podrás leerlo y descargarlo directamente sin coste ni bloqueos.
               </div>
             </div>
           </div>
@@ -565,7 +568,7 @@ document.addEventListener('DOMContentLoaded', () => {
               </div>
             </div>
 
-            <!-- Opera GX Direct CTA Card -->
+            <!-- Wuolah Direct CTA Card -->
             <div style="background: linear-gradient(135deg, rgba(245, 158, 11, 0.12), rgba(99, 102, 241, 0.12)); border: 1px solid rgba(245, 158, 11, 0.35); border-radius: var(--radius-md); padding: 20px; margin-bottom: 24px;">
               <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
                 <div style="background: rgba(245, 158, 11, 0.2); color: #f59e0b; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
@@ -576,7 +579,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div>
                   <h4 style="margin: 0 0 4px 0; color: #fff; font-size: 1.1rem; font-weight: 700;">Acceso directo al PDF en Wuolah</h4>
                   <p style="margin: 0; color: var(--text-muted); font-size: 0.88rem; line-height: 1.5;">
-                    Pulsa para abrir el documento original en Wuolah. Con tu sesión iniciada en Opera GX, accederás al visor completo y al botón de descarga directa sin esperas ni coste.
+                    Pulsa para abrir el documento original en Wuolah. Accederás al visor oficial y al botón de descarga directa sin esperas ni coste.
                   </p>
                 </div>
               </div>
@@ -642,6 +645,242 @@ document.addEventListener('DOMContentLoaded', () => {
       document.body.style.overflow = '';
     }
   };
+
+
+  // ==========================================
+  // ESCÁNER EN TIEMPO REAL Y PUENTE MULTI-FUENTE
+  // ==========================================
+  const liveScannerModal = document.getElementById('liveScannerModal');
+  const liveScannerModalCloseBtn = document.getElementById('liveScannerModalCloseBtn');
+  const liveScannerModalTitle = document.getElementById('liveScannerModalTitle');
+  const liveScannerModalBody = document.getElementById('liveScannerModalBody');
+
+  window.closeLiveScannerModal = function() {
+    if (liveScannerModal) {
+      liveScannerModal.classList.remove('active');
+    }
+    if ((!subjectModal || !subjectModal.classList.contains('active')) && 
+        (!pdfViewerModal || !pdfViewerModal.classList.contains('active'))) {
+      document.body.style.overflow = '';
+    }
+  };
+
+  window.scanSubjectLive = async function(subjectId) {
+    const subject = SUBJECTS_DATA.find(s => s.id === subjectId);
+    if (!subject) return;
+
+    let slug = 'fundamentos-de-electronica';
+    let course = '1';
+    try {
+      const match = subject.wuolahDirectUrl.match(/\/apuntes\/([^?]+)/);
+      if (match) slug = match[1];
+      const courseMatch = subject.wuolahDirectUrl.match(/f_course=(\d+)/);
+      if (courseMatch) course = courseMatch[1];
+    } catch(e) {}
+
+    if (liveScannerModalTitle) {
+      liveScannerModalTitle.textContent = `Escaneo en Vivo: ${subject.name} (${subject.acronym})`;
+    }
+
+    if (liveScannerModalBody) {
+      liveScannerModalBody.innerHTML = `
+        <div style="text-align: center; padding: 40px 20px;">
+          <div class="live-pulse-dot" style="width: 20px; height: 20px; margin: 0 auto 16px auto;"></div>
+          <h4 style="font-size: 1.15rem; color: #fff; margin-bottom: 8px;">Conectando en vivo con Wuolah y Repositorios UMA...</h4>
+          <p style="font-size: 0.88rem; color: var(--text-muted); max-width: 520px; margin: 0 auto;">
+            Rastreando los mejores apuntes subidos, valoraciones de la comunidad y exámenes resueltos para <strong>${subject.name}</strong> sin precarga estática.
+          </p>
+        </div>
+      `;
+    }
+
+    if (liveScannerModal) {
+      liveScannerModal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    try {
+      const resp = await fetch(`/api/live-wuolah?slug=${encodeURIComponent(slug)}&course=${encodeURIComponent(course)}`);
+      if (resp.ok) {
+        const data = await resp.json();
+        if (data.success && data.items && data.items.length > 0) {
+          renderLiveScanResults(subject, slug, data.items);
+          return;
+        }
+      }
+    } catch (err) {
+      console.warn("Puente local offline, usando pasarela directa:", err);
+    }
+
+    renderLiveScanFallback(subject, slug);
+  };
+
+  function renderLiveScanResults(subject, slug, items) {
+    const topItems = items.slice(0, 10);
+    const googleDorkUrl = `https://www.google.com/search?q=${encodeURIComponent('site:uma.es filetype:pdf "' + subject.name + '"')}`;
+    const githubUrl = `https://github.com/search?q=${encodeURIComponent('uma "ingenieria del software" "' + subject.name + '"')}`;
+    const univOcwUrl = `https://www.google.com/search?q=${encodeURIComponent('(site:upm.es OR site:upv.es OR site:uc3m.es) filetype:pdf "' + subject.name + '" apuntes')}`;
+
+    liveScannerModalBody.innerHTML = `
+      <div style="display: flex; flex-direction: column; gap: 20px;">
+        <!-- Top Status Banner -->
+        <div style="display: flex; justify-content: space-between; align-items: center; background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: var(--radius-md); padding: 12px 18px; flex-wrap: wrap; gap: 10px;">
+          <div>
+            <span style="font-size: 0.74rem; font-weight: 800; color: #34d399; text-transform: uppercase; letter-spacing: 0.05em; display: flex; align-items: center; gap: 6px; margin-bottom: 2px;">
+              <span class="live-pulse-dot" style="width: 7px; height: 7px;"></span>
+              Flujo en Tiempo Real Activo
+            </span>
+            <span style="font-size: 0.95rem; color: #fff; font-weight: 700;">${items.length} documentos detectados en la comunidad UMA</span>
+          </div>
+          <a href="${subject.wuolahDirectUrl}" target="_blank" rel="noopener noreferrer" class="btn-pdf-view" style="font-size: 0.8rem; padding: 6px 14px;">
+            <span>Ver Todo en Wuolah (${subject.acronym})</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+          </a>
+        </div>
+
+        <!-- Live Items List -->
+        <div style="display: flex; flex-direction: column; gap: 12px; max-height: 420px; overflow-y: auto; padding-right: 4px;">
+          ${topItems.map(item => `
+            <div class="wuolah-note-item" style="border-color: rgba(255, 255, 255, 0.12); background: rgba(15, 23, 42, 0.75);">
+              <div class="note-header">
+                <div class="note-title-wrap">
+                  <div class="note-verified-tag">
+                    <span class="live-pulse-dot" style="width: 6px; height: 6px;"></span>
+                    <span>En Vivo • Wuolah UMA</span>
+                  </div>
+                  <h5 class="note-title" style="font-size: 0.96rem;">${item.title}</h5>
+                  <div class="note-badges-row">
+                    <span class="note-tag note-tag-highlight">${item.type || 'Apuntes'}</span>
+                    <span class="note-tag">${item.pages} págs</span>
+                    <span class="note-tag note-tag-free">100% Gratis</span>
+                    ${item.bookmarks ? `<span class="note-tag">🔖 ${item.bookmarks} favs</span>` : ''}
+                  </div>
+                </div>
+                <div class="note-rating-box" title="Valoración media">
+                  ★ ${item.rating}
+                </div>
+              </div>
+
+              <p class="note-description" style="font-size: 0.82rem;">${item.description || 'Documento disponible para consulta y descarga inmediata en Wuolah.'}</p>
+
+              <div class="note-footer">
+                <div class="note-meta">
+                  <span>Por <strong>@${item.uploader}</strong></span>
+                  <span>•</span>
+                  <span>${item.downloads} descargas</span>
+                  <span>•</span>
+                  <span>${item.views} visitas</span>
+                </div>
+                <div class="note-action-btns">
+                  <a href="${item.wuolahUrl}" target="_blank" rel="noopener noreferrer" class="btn-pdf-view" onclick="window.trackWuolahOpen('${item.title}')">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                    Abrir en Wuolah
+                  </a>
+                </div>
+              </div>
+            </div>
+          `).join('')}
+        </div>
+
+        <!-- Multi-Source Bridge Quick Links for this Subject -->
+        <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: var(--radius-md); padding: 14px 18px;">
+          <h5 style="font-size: 0.85rem; font-weight: 700; color: #a5b4fc; margin-bottom: 10px; display: flex; align-items: center; gap: 6px;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            Explorar más allá de Wuolah para ${subject.acronym} (Rastreo en vivo sin precarga):
+          </h5>
+          <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <a href="${googleDorkUrl}" target="_blank" rel="noopener noreferrer" class="preset-chip" style="color: #f87171; border-color: rgba(239, 68, 68, 0.35);">
+              📄 Google Dorking (PDFs site:uma.es)
+            </a>
+            <a href="${githubUrl}" target="_blank" rel="noopener noreferrer" class="preset-chip" style="color: #34d399; border-color: rgba(168, 85, 247, 0.35);">
+              🐙 Repositorios UMA en GitHub
+            </a>
+            <a href="${univOcwUrl}" target="_blank" rel="noopener noreferrer" class="preset-chip" style="color: #c084fc; border-color: rgba(168, 85, 247, 0.35);">
+              🏛️ Universidades OCW (UPM / UPV)
+            </a>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  function renderLiveScanFallback(subject, slug) {
+    const googleDorkUrl = `https://www.google.com/search?q=${encodeURIComponent('site:uma.es filetype:pdf "' + subject.name + '"')}`;
+    const googleExamsUrl = `https://www.google.com/search?q=${encodeURIComponent('filetype:pdf "ingenieria del software" "malaga" "' + subject.name + '" examen OR parcial')}`;
+    const githubUrl = `https://github.com/search?q=${encodeURIComponent('uma "ingenieria del software" "' + subject.name + '"')}`;
+    const univOcwUrl = `https://www.google.com/search?q=${encodeURIComponent('(site:upm.es OR site:upv.es OR site:uc3m.es) filetype:pdf "' + subject.name + '"')}`;
+
+    liveScannerModalBody.innerHTML = `
+      <div style="display: flex; flex-direction: column; gap: 16px;">
+        <div style="background: rgba(99, 102, 241, 0.12); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: var(--radius-md); padding: 14px 18px;">
+          <h4 style="font-size: 0.95rem; font-weight: 700; color: #fff; margin-bottom: 6px;">Puente de Rastreo en Vivo: ${subject.name}</h4>
+          <p style="font-size: 0.84rem; color: var(--text-muted); margin: 0;">
+            Selecciona la fuente en la que deseas lanzar la búsqueda en tiempo real. Abre directamente en Wuolah con consultas optimizadas y sin necesidad de precarga estática.
+          </p>
+        </div>
+
+        <div class="live-results-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px;">
+          <!-- Wuolah Direct Hub -->
+          <div class="live-bridge-card">
+            <div class="bridge-card-top">
+              <span class="bridge-source-badge badge-wuolah-live">⚡ Wuolah Comunidad UMA</span>
+              <span class="bridge-format-tag">En Directo</span>
+            </div>
+            <h4 class="bridge-card-title">Muro en Tiempo Real de ${subject.acronym}</h4>
+            <p class="bridge-card-desc">Acceso directo al canal de la asignatura con los últimos archivos subidos por compañeros de clase.</p>
+            <a href="${subject.wuolahDirectUrl}" target="_blank" rel="noopener noreferrer" class="bridge-card-action-btn btn-wuolah-action">
+              <span>Abrir Canal en Wuolah</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </a>
+          </div>
+
+          <!-- Google Dorking PDFs UMA -->
+          <div class="live-bridge-card">
+            <div class="bridge-card-top">
+              <span class="bridge-source-badge badge-google-pdf">📄 Google Dorking</span>
+              <span class="bridge-format-tag">site:uma.es</span>
+            </div>
+            <h4 class="bridge-card-title">PDFs Oficiales en Servidores UMA</h4>
+            <div class="bridge-card-query-snippet">site:uma.es filetype:pdf "${subject.name}"</div>
+            <a href="${googleDorkUrl}" target="_blank" rel="noopener noreferrer" class="bridge-card-action-btn">
+              <span>Lanzar Rastreador UMA</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </a>
+          </div>
+
+          <!-- Google Exams -->
+          <div class="live-bridge-card">
+            <div class="bridge-card-top">
+              <span class="bridge-source-badge badge-google-pdf">📝 Exámenes y Parciales</span>
+              <span class="bridge-format-tag">PDF</span>
+            </div>
+            <h4 class="bridge-card-title">Exámenes y Convocatorias Pasadas</h4>
+            <div class="bridge-card-query-snippet">filetype:pdf "malaga" "${subject.name}" examen</div>
+            <a href="${googleExamsUrl}" target="_blank" rel="noopener noreferrer" class="bridge-card-action-btn">
+              <span>Buscar Exámenes en Vivo</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </a>
+          </div>
+
+          <!-- GitHub Repos -->
+          <div class="live-bridge-card">
+            <div class="bridge-card-top">
+              <span class="bridge-source-badge badge-github-uma">🐙 GitHub UMA</span>
+              <span class="bridge-format-tag">Repos & Código</span>
+            </div>
+            <h4 class="bridge-card-title">Repositorios de Estudiantes</h4>
+            <div class="bridge-card-query-snippet">uma "software" "${subject.name}"</div>
+            <a href="${githubUrl}" target="_blank" rel="noopener noreferrer" class="bridge-card-action-btn">
+              <span>Buscar Repos en GitHub</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+
 
   // ==========================================
   // NOTIFICACIONES TOAST
@@ -743,6 +982,20 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
+
+    // Modal Escáner en Vivo
+    if (liveScannerModalCloseBtn) {
+      liveScannerModalCloseBtn.addEventListener('click', window.closeLiveScannerModal);
+    }
+
+    if (liveScannerModal) {
+      liveScannerModal.addEventListener('click', (e) => {
+        if (e.target === liveScannerModal) {
+          window.closeLiveScannerModal();
+        }
+      });
+    }
+
     if (btnPdfModalPrint) {
       btnPdfModalPrint.addEventListener('click', () => {
         window.print();
@@ -752,7 +1005,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // Cierre con Escape
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
-        if (pdfViewerModal && pdfViewerModal.classList.contains('active')) {
+
+        if (liveScannerModal && liveScannerModal.classList.contains('active')) {
+          window.closeLiveScannerModal();
+        } else if (pdfViewerModal && pdfViewerModal.classList.contains('active')) {
+
           window.closePdfViewer();
         } else if (subjectModal && subjectModal.classList.contains('active')) {
           closeSubjectModal();
